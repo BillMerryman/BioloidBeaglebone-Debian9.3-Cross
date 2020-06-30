@@ -98,7 +98,7 @@ clean:
 	@echo 'Cleaning project: $(PROJ_NAME)'
 	@echo ''
 	@echo 'Removing files in the "$(GEN_DIR)" directory'
-	@rm -rf $(GEN_DIR)
+	if exist "$(GEN_DIR)"; @rd /s /q $(GEN_DIR)
 	@echo ''
 	@echo 'Finished cleaning project: $(PROJ_NAME)'
 	@echo '************************************************************'

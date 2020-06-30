@@ -8,11 +8,11 @@ OBJDIR = $(CURDIR)
 
 # OpenCV include path
 
-OPENCV_INC = -IC:\BBGCC\arm-linux-gnueabihf\sysroot\usr\local\include -IC:\BBGCC\arm-linux-gnueabihf\sysroot\usr\local\include\opencv -IC:\BBGCC\arm-linux-gnueabihf\sysroot\usr\local\include\opencv2 
+OPENCV_INC = -ID:\BBGCC9.3\arm-linux-gnueabihf\sysroot\usr\local\include -ID:\BBGCC9.3\arm-linux-gnueabihf\sysroot\usr\local\include\opencv -ID:\BBGCC9.3\arm-linux-gnueabihf\sysroot\usr\local\include\opencv2 
 
 # OpenCV library path
 
-OPENCV_LIBPATH = -LC:\BBGCC\arm-linux-gnueabihf\sysroot\usr\local\lib
+OPENCV_LIBPATH = -LD:\BBGCC9.3\arm-linux-gnueabihf\sysroot\usr\local\lib
 
 # OpenCV libraries
 
@@ -53,11 +53,11 @@ COBJ = \
  	visionManager.o
 
 # gcc binaries to use
-CC = C:\BBGCC\bin\arm-linux-gnueabihf-gcc.exe
-CP = C:\BBGCC\bin\arm-linux-gnueabihf-g++.exe
-LD = C:\BBGCC\bin\arm-linux-gnueabihf-g++.exe
+CC = D:\BBGCC9.3\bin\arm-linux-gnueabihf-gcc.exe
+CP = D:\BBGCC9.3\bin\arm-linux-gnueabihf-g++.exe
+LD = D:\BBGCC9.3\bin\arm-linux-gnueabihf-g++.exe
 
-# rm is part of yagarto-tools
+# rm 
 SHELL = cmd
 REMOVE = rm -f
 
@@ -100,13 +100,14 @@ $(CPPOBJ): %.o: %.cpp
 	$(CP) -c -o $@ $< $(CFLAGS) $(OPENCV_INC)
 
 clean: pru_clean
-	$(REMOVE) ./*.o ./PRUInteropDataLocation.h
+	del *.o
+	$(REMOVE) ./PRUInteropDataLocation.h
 	$(REMOVE) $(PROJECT)
 	
 pru_bin:
-	make TARGET_MODE=Release -C PRU_0
-	make TARGET_MODE=Release -C PRU_1
+	make -C PRU_0 TARGET_MODE=Release
+	make -C PRU_1 TARGET_MODE=Release
 
 pru_clean:
-	MAKE -C PRU_0 clean
+	make -C PRU_0 clean
 	make -C PRU_1 clean

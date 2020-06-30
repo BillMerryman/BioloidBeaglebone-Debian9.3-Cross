@@ -1,28 +1,31 @@
-21:09:24 **** Clean-only build of configuration Default for project BioloidBeaglebone ****
+20:54:25 **** Clean-only build of configuration Default for project BioloidBeaglebone ****
 make clean 
-MAKE -C PRU_0 clean
-MAKE[1]: Entering directory `D:/Programming/Robot/Bioloid/Beaglebone/BioloidBeaglebone-Debian9.3/BioloidBeagleboneCross/BioloidBeaglebone/PRU_0'
-
-AM335x_PRU.cmd AX12.c AX12.h AXS1.c AXS1.h bin.cmd clock.c clock.h common.h copyPRUInteropDataLocation.bat dynamixels.c dynamixels.h main.c Makefile motion.c motion.h protocol.h PRUInterop0.c PRUInterop0.h TI_Headers uart.c uart.h
-Cleaning project: PRU_0
-
-Removing files in the "gen" directory
-
-Finished cleaning project: PRU_0
-AM335x_PRU.cmd AX12.c AX12.h AXS1.c AXS1.h bin.cmd clock.c clock.h common.h copyPRUInteropDataLocation.bat dynamixels.c dynamixels.h main.c Makefile motion.c motion.h protocol.h PRUInterop0.c PRUInterop0.h TI_Headers uart.c uart.h
-
-MAKE[1]: Leaving directory `D:/Programming/Robot/Bioloid/Beaglebone/BioloidBeaglebone-Debian9.3/BioloidBeagleboneCross/BioloidBeaglebone/PRU_0'
+make -C PRU_0 clean
+make[1]: Entering directory `D:/Programming/Robot/Bioloid/BioloidBeaglebone-Debian9.3-Cross/BioloidBeaglebone/PRU_0'
+''
+'************************************************************'
+'Cleaning project: PRU_0'
+''
+'Removing files in the "gen" directory'
+if exist "gen"; @rd /s /q gen
+''
+'Finished cleaning project: PRU_0'
+'************************************************************'
+''
+make[1]: Leaving directory `D:/Programming/Robot/Bioloid/BioloidBeaglebone-Debian9.3-Cross/BioloidBeaglebone/PRU_0'
 make -C PRU_1 clean
-make[1]: Entering directory `D:/Programming/Robot/Bioloid/Beaglebone/BioloidBeaglebone-Debian9.3/BioloidBeagleboneCross/BioloidBeaglebone/PRU_1'
-
-AM335x_PRU.cmd bin.cmd copyPRUInteropDataLocation.bat image.c image.h LED.h main.c Makefile PRUInterop1.c PRUInterop1.h TI_Headers
-Cleaning project: PRU_1
-
-Removing files in the "gen" directory
-
-Finished cleaning project: PRU_1
-AM335x_PRU.cmd bin.cmd copyPRUInteropDataLocation.bat image.c image.h LED.h main.c Makefile PRUInterop1.c PRUInterop1.h TI_Headers
-
-make[1]: Leaving directory `D:/Programming/Robot/Bioloid/Beaglebone/BioloidBeaglebone-Debian9.3/BioloidBeagleboneCross/BioloidBeaglebone/PRU_1'
-rm -f ./*.o ./PRUInteropDataLocation.h
+make[1]: Entering directory `D:/Programming/Robot/Bioloid/BioloidBeaglebone-Debian9.3-Cross/BioloidBeaglebone/PRU_1'
+''
+'************************************************************'
+'Cleaning project: PRU_1'
+''
+'Removing files in the "gen" directory'
+if exist "gen"; @rd /s /q gen
+''
+'Finished cleaning project: PRU_1'
+'************************************************************'
+''
+make[1]: Leaving directory `D:/Programming/Robot/Bioloid/BioloidBeaglebone-Debian9.3-Cross/BioloidBeaglebone/PRU_1'
+del *.o
+rm -f ./PRUInteropDataLocation.h
 rm -f BioloidBeaglebone
