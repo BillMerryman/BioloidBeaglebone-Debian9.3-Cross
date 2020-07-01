@@ -1,4 +1,4 @@
-20:54:25 **** Clean-only build of configuration Default for project BioloidBeaglebone ****
+18:43:08 **** Clean-only build of configuration Default for project BioloidBeaglebone ****
 make clean 
 make -C PRU_0 clean
 make[1]: Entering directory `D:/Programming/Robot/Bioloid/BioloidBeaglebone-Debian9.3-Cross/BioloidBeaglebone/PRU_0'
